@@ -11,15 +11,14 @@ import {
   TooltipContent,
   TooltipProvider
 } from "@/components/ui/tooltip";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 interface MenuProps {
   isOpen: boolean | undefined;
 }
 
 export function Menu({ isOpen }: MenuProps) {
-  // const pathname = usePathname();
-  const pathname = '';
+  const {pathname} = useLocation();
   const menuList = getMenuList(pathname);
 
   return (
