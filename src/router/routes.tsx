@@ -1,4 +1,4 @@
-import {RouteObject} from "react-router-dom";
+import {Navigate, RouteObject} from "react-router-dom";
 import {lazy} from "react";
 import DashboardPage from "@/views/dashboard.tsx";
 
@@ -9,6 +9,10 @@ export const routes: RouteObject[] = [
     path: "/",
     element: <AdminPanelLayout/>,
     children: [
+      {
+        path: "",
+        element: <Navigate to={"/dashboard"} replace/>
+      },
       {
         path: "dashboard",
         element: <DashboardPage/>

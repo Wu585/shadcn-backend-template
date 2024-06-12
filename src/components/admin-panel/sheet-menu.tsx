@@ -8,6 +8,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {Link} from "react-router-dom";
 
 export function SheetMenu() {
   return (
@@ -24,10 +25,10 @@ export function SheetMenu() {
             variant="link"
             asChild
           >
-            <a href="/dashboard" className="flex items-center gap-2">
+            <Link to="/dashboard" className="flex items-center gap-2 h-8">
               <PanelsTopLeft className="w-6 h-6 mr-1" />
               <h1 className="font-bold text-lg">Brand</h1>
-            </a>
+            </Link>
           </Button>
         </SheetHeader>
         <Menu isOpen />
